@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciador de Tarefas</title>
+
+  <link rel="stylesheet" type="text/css" href="http://w2ui.com/src/w2ui-1.4.min.css" />
+
+  <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box;
+    }
+
+    h1 {
+      text-align: center;
+      padding: 25px;
+    }
+
+    button {
+      cursor: pointer;
+      width: 100%;
+      max-width: 120px;
+      border: 0;
+      border-radius: 12px;
+      background: green;
+      color: #fff;
+      padding: 12px
+    }
+
+    #content-wrapper {
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      width: 100%;
+      margin: 0 auto;
+      max-width: 1200px;
+      min-height: 100%;
+
+      #tarefa-form {
+        display: flex;
+        width: 100%;
+
+        flex-direction: column;
+        gap: 15px;
+        flex: 1;
+      }
+
+      #grid {
+        height: 100%;
+        min-height: 300px;
+        color: #000;
+        flex: 1;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Gerenciador de Usuarios</h1>
+  <div id="content-wrapper">
+    <form id="tarefa-form">
+      <input type="text" name="titulo" placeholder="Título" required />
+      <textarea name="descricao" placeholder="Digite a descrição de sua task" required></textarea>
+
+      <button type="submit" class="btn-submit">Adicionar</button>
+    </form>
+
+    <div id="grid"></div>
+  </div>
+</body>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script type="text/javascript" src="http://w2ui.com/src/w2ui-1.4.min.js"></script>
+<script src="./index.js"></script>
+
+</html>
